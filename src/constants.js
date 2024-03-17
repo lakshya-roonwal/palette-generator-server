@@ -1,2 +1,2 @@
-DB_NAME = "palette-generator"
-module.exports = {DB_NAME}
+DB_NAME = "palette-generator";
+module.exports = { DB_NAME };
