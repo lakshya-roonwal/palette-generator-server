@@ -1,1 +1,1 @@
-# Color Pellate Generator
+# Color Palette Generator

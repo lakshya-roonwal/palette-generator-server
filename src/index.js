@@ -6,5 +6,5 @@ const port =80;
 app.get('/',(req,res)=>{res.send('Hello World')})
 
 app.listen(port,(req,res)=>{
-console.log(`Server successfully started on http://localhost:${port}`)
+    console.log(`Server successfully started on http://localhost:${port}`)
 })
