@@ -29,13 +29,11 @@ const paletteSchema = new mongoose.Schema(
     {
         name: {
             type: String,
-            required: true,
-            default: "Untitled Palette",
+            required: [true, "Palette Name is Required"],
         },
         palette: colorsSchema,
         owner: {
-            type: mongoose.Types.ObjectId,
-            ref: "User",
+            type: String,
             required: true,
         },
     },
