@@ -10,6 +10,8 @@ const router = express.Router();
 
 router.get("/getallpalettes", ClerkExpressRequireAuth(), getAllPalettes);
 router.post("/createpalette",ClerkExpressRequireAuth(), createPalette);
+// TODO : update , delete controller
+
 
 // Error handling middleware
 router.use((err, req, res, next) => {

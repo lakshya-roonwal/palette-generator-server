@@ -6,10 +6,20 @@ const getAllPalettes = async (req, res) => {
     // Getting userId from req.auth
     // Check for User Id in palette collection if don't have any returns a empty array
     // return all the palettes found
-    const { userId } = req.auth;
+    
+    const { userId } = req.auth; 
+
+    const palettes=await Palette.find({owner:userId});
+
+    if(!palettes){
+        return res
+        .status(200)
+        .json(new ApiResponse(200, { palettes:[] }, "No Palettes Available"));    
+    }
+
     return res
         .status(200)
-        .json(new ApiResponse(200, { id: userId }, "Working Fine"));
+        .json(new ApiResponse(200, { palettes:palettes }));
 };
 
 const createPalette = async (req, res) => {
