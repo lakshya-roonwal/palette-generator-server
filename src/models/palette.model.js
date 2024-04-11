@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+// Todo : Remove Unneccesory Colors
 const colorsSchema = new mongoose.Schema({
     primary: String,
     primary_content: String,
@@ -9,14 +9,9 @@ const colorsSchema = new mongoose.Schema({
     secondary_content: String,
     secondary_light: String,
     secondary_dark: String,
-    neutrals: String,
     foreground: String,
     background: String,
     border: String,
-    copy: String,
-    copy_light: String,
-    copy_lighter: String,
-    utility: String,
     success: String,
     warning: String,
     error: String,
